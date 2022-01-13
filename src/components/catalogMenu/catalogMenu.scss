@@ -1,0 +1,11 @@
+@use "../../variables";
+
+.hero__menu {
+  background: white;
+  height: 10.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 762px 0 0 0;
+}

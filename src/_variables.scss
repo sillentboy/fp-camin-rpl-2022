@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$font-family: "Inter", sans-serif;
+$primary-color: linear-gradient(242.99deg, #f8e7dd -3.29%, #fffaf0 118.42%);
+$secondary-color: linear-gradient(123.49deg, #ff4029 0.57%, #f02228 104.89%);
+$tertiary-color: linear-gradient(262.18deg, #ffb737 -0.11%, #ffbe4b 97.74%);
+
+$breakpoints-xs: 0;
+$breakpoints-sm: 600px;
+$breakpoints-md: 900px;
+$breakpoints-lg: 1200px;
+$breakpoints-xl: 1536px;
+
+$breakpoints: (
+  "xs": 576px,
+  "sm": 768px,
+  "md": 992px,
+  "lg": 1200px,
+) !default;
+
+@mixin breakpoints($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}

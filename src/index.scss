@@ -1,0 +1,54 @@
+@use "variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: variables.$font-family;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+body {
+  background: variables.$primary-color;
+}
+
+ul li {
+  list-style: none;
+}
+
+.gradient__bg {
+  background: url(./assets/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.section__padding {
+  padding-right: 8rem;
+  padding-left: 8rem;
+
+  @include variables.breakpoints("lg") {
+    padding-right: 6.5rem;
+    padding-left: 6.5rem;
+  }
+
+  @include variables.breakpoints("md") {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+
+  @include variables.breakpoints("sm") {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+  }
+
+  @include variables.breakpoints("xs") {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
