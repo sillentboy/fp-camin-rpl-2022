@@ -1,11 +1,11 @@
 import React from 'react'
-import { CatalogMenu } from '../../components/'
+import { Carousel } from '../../components/'
 import './hero.scss'
 import heroImage from "../../assets/heroimage.png";
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div className='hero section__padding'>
       <div className="hero__container">
         <div className="hero__container-content">
           <h1>JAGONYA AYAM BUCKET</h1>
@@ -16,7 +16,7 @@ const Hero = () => {
           <img src={heroImage} alt="hero" />
         </div>
       </div>
-      <CatalogMenu />
+      {/* <Carousel /> */}
     </div>
   )
 }

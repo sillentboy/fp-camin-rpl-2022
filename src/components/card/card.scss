@@ -1,0 +1,73 @@
+@use "../../variables";
+
+.catalog__card {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  box-shadow: 7px 10px 24px rgba(255, 199, 31, 0.22);
+  border-radius: 12px;
+  padding: 18px;
+  flex: 1.5;
+  justify-content: space-between;
+  height: 12rem;
+  cursor: pointer;
+
+  &:hover {
+    background: variables.$secondary-color;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 1px black;
+
+    h3,
+    p {
+      color: #ffffff;
+    }
+
+    span {
+      color: #000000;
+    }
+
+    button {
+      background: variables.$tertiary-color;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h3 {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #868686;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+    }
+
+    button {
+      background: variables.$secondary-color;
+      border-radius: 18px;
+      outline: none;
+      border: none;
+      padding: 7px;
+      width: 8rem;
+    }
+  }
+
+  &-image {
+    align-self: center;
+  }
+}

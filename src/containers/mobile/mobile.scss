@@ -1,0 +1,44 @@
+@use "../../variables";
+
+.mobile {
+  background: variables.$tertiary-color;
+  height: 20.5rem;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    height: 100%;
+
+    img {
+      margin-top: -4rem;
+      margin-bottom: -4rem;
+    }
+
+    &-text {
+      padding-top: 3rem;
+
+      h2 {
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 3rem;
+        text-transform: capitalize;
+        color: #ffffff;
+
+        @include variables.breakpoints("lg") {
+          font-size: 2rem;
+          line-height: 2.8rem;
+        }
+      }
+
+      &__icon {
+        img {
+          height: 50px;
+          margin-right: 2rem;
+        }
+      }
+    }
+    @include variables.breakpoints("md") {
+    }
+  }
+}

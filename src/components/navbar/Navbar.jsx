@@ -6,7 +6,7 @@ import { RiShoppingBasket2Line } from 'react-icons/ri'
 
 const Navbar = () => {
   return (
-    <div className='navbar'>
+    <div className='navbar section__padding'>
       <div className="navbar__container">
         <div className="navbar__container-logo">
           <img src={logo} alt="logo" />

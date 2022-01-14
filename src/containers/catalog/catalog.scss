@@ -1,0 +1,33 @@
+.catalog {
+  background: url(../../assets/catalog_bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-content: center;
+
+    &-groupA {
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    &-groupB {
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+
+      img {
+        width: 17rem;
+      }
+    }
+  }
+}

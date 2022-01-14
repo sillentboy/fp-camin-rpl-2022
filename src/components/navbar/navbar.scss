@@ -2,6 +2,8 @@
 
 .navbar {
   color: white;
+  padding-top: unset !important;
+  padding-bottom: unset !important;
 
   &__container {
     display: flex;
