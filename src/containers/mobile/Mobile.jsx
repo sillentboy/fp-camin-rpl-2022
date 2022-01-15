@@ -10,10 +10,8 @@ const Mobile = () => {
         <div className="mobile__container-text">
           <h2>Now you can reach us through Mobile App</h2>
           <div className="mobile__container-text__icon">
-            {/* <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/id/app/kfcku/id1474915867?itsct=apps_box_promote_link&itscg=30200"><img src={playStore} alt="download on playstore" /></a>
-            <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.kfc.mobile&hl=in&gl=US"><img src={appStore} alt="download on appstore" /></a> */}
-            <img src={appStore} alt="download on appstore" />
-            <img src={playStore} alt="download on playstore" />
+            <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/id/app/kfcku/id1474915867?itsct=apps_box_promote_link&itscg=30200"><img src={appStore} alt="download on appstore" /></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.kfc.mobile&hl=in&gl=US"><img src={playStore} alt="download on playstore" /></a>
           </div>
         </div>
       </div >

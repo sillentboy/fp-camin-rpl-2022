@@ -1,5 +1,12 @@
 import { Navbar } from "./components";
-import { Catalog, Footer, Hero, Mobile, Testimonial } from "./containers";
+import {
+  Catalog,
+  Contact,
+  Footer,
+  Hero,
+  Mobile,
+  Testimonial,
+} from "./containers";
 
 function App() {
   return (
@@ -11,6 +18,7 @@ function App() {
       <Catalog />
       <Mobile />
       <Testimonial />
+      <Contact />
       <Footer />
     </div>
   );

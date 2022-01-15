@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+.testimonial {
+  min-height: 52rem;
+
+  &__container {
+    margin-top: 7.5rem;
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2em 2em;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+      "header header header header header header . . . . . ."
+      "header header header header header header card1 card1 card1 card1 card1 card1"
+      "header header header header header header card1 card1 card1 card1 card1 card1"
+      "header header header header header header card1 card1 card1 card1 card1 card1"
+      ". card2 card2 card2 card2 card2 card1 card1 card1 card1 card1 card1"
+      ". card2 card2 card2 card2 card2 card3 card3 card3 card3 card3 ."
+      ". card2 card2 card2 card2 card2 card3 card3 card3 card3 card3 ."
+      ". card2 card2 card2 card2 card2 card3 card3 card3 card3 card3 ."
+      ". card2 card2 card2 card2 card2 card3 card3 card3 card3 card3 ."
+      ". card2 card2 card2 card2 card2 card3 card3 card3 card3 card3 .";
+
+    div:nth-child(2) {
+      grid-area: card1;
+    }
+
+    div:nth-child(3) {
+      grid-area: card2;
+    }
+
+    div:nth-child(4) {
+      grid-area: card3;
+    }
+
+    &-heading {
+      font-family: "Manrope";
+      color: #18191f;
+      position: relative;
+      grid-area: header;
+
+      h2 {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 32px;
+      }
+
+      & > svg {
+        position: absolute;
+        top: 0.5rem;
+        left: 3rem;
+      }
+    }
+  }
+}
