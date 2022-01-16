@@ -1,9 +1,69 @@
+@use "../../variables";
+
 .hero__menu {
   background: white;
   height: 10.5rem;
   display: flex;
   justify-content: center;
+  padding-top: 2rem;
+  position: relative;
+
+  &-tittle {
+    box-shadow: 2px 4px 12px rgba(255, 199, 31, 0.25);
+    border-radius: 22px;
+    background: variables.$tertiary-color;
+    padding: 0.8rem 3.75rem;
+    position: absolute;
+    bottom: 9rem;
+
+    p {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+.swiper-button-prev {
+  background-image: url(../../assets/prev.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-button-next {
+  background-image: url(../../assets/next.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    display: none;
+  }
+}
+
+.hero__menu-carousel {
+  display: flex;
   align-items: center;
-  position: absolute;
-  inset: 762px 0 0 0;
+  flex-direction: column;
+  p {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000;
+  }
+}
+
+.swiper-slide-active {
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #f73d27;
+    width: 50%;
+    margin: auto;
+  }
 }

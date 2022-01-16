@@ -9,19 +9,52 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     height: 100%;
 
     &-wrapper {
       display: flex;
       align-items: center;
-      gap: 1rem;
-    }
-  }
+      height: 3.5rem;
 
-  p {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    color: #ffffff;
+      &__icons {
+        &-A {
+          height: 45px;
+          width: auto;
+          margin-right: 1rem;
+
+          @include variables.breakpoints("lg") {
+            height: 40px;
+          }
+        }
+
+        &-B {
+          height: 35px;
+          width: auto;
+          margin-left: 1rem;
+
+          @include variables.breakpoints("lg") {
+            height: 30px;
+          }
+        }
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #ffffff;
+
+        @include variables.breakpoints("lg") {
+          font-size: 20px;
+        }
+      }
+
+      img {
+        @include variables.breakpoints("md") {
+          height: 30px;
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './contact.scss'
 import logo from "../../assets/logo.svg";
+import { IconContext } from "react-icons";
 import { RiWhatsappFill, RiPhoneFill, RiFacebookBoxFill, RiTwitterFill, RiInstagramFill } from 'react-icons/ri'
 
 const Contact = () => {
@@ -11,17 +12,23 @@ const Contact = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="contact__container-wrapper">
-          <RiWhatsappFill size={45} color='#fff' />
+          <IconContext.Provider value={{ color: "#fff", className: "contact__container-wrapper__icons-A" }}>
+            <RiWhatsappFill />
+          </IconContext.Provider>
           <p>0823 - 1267 - 7711</p>
         </div>
         <div className="contact__container-wrapper">
-          <RiPhoneFill size={45} color='#fff' />
+          <IconContext.Provider value={{ color: "#fff", className: "contact__container-wrapper__icons-A" }}>
+            <RiPhoneFill />
+          </IconContext.Provider>
           <p>(021) 889 - 0011</p>
         </div>
         <div className="contact__container-wrapper">
-          <RiFacebookBoxFill size={35} color='#fff' />
-          <RiTwitterFill size={35} color='#fff' />
-          <RiInstagramFill size={35} color='#fff' />
+          <IconContext.Provider value={{ color: "#fff", className: "contact__container-wrapper__icons-B" }}>
+            <RiFacebookBoxFill />
+            <RiTwitterFill />
+            <RiInstagramFill />
+          </IconContext.Provider>
         </div>
       </div>
     </div>

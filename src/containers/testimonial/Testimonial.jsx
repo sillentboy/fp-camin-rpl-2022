@@ -5,7 +5,7 @@ import { TestiCard } from '../../components'
 
 const Testimonial = () => {
   return (
-    <div className='testimonial'>
+    <div className='testimonial' id='testimonial'>
       <div className="testimonial__container section__padding">
         <div className="testimonial__container-heading">
           <Quote fill="#FA5532A3" fill-opacity="0.64" />

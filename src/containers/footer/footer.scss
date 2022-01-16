@@ -1,3 +1,4 @@
+@use "../../variables";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 .footer {
@@ -14,19 +15,24 @@
   &__container {
     padding-top: 3.25rem;
     display: flex;
-    gap: 2rem;
 
     &-content {
+      margin-right: 2rem;
       h6 {
         font-weight: 500;
         font-size: 20px;
         line-height: 30px;
         color: #ffffff;
         margin-bottom: 1.5rem;
+
+        @include variables.breakpoints("sm") {
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
 
       li {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 26px;
         color: #d9dbe1;
         margin-bottom: 1rem;
@@ -41,6 +47,11 @@
 
       p {
         color: #d9dbe1;
+        font-size: 14px;
+
+        @include variables.breakpoints("sm") {
+          font-size: 12px;
+        }
       }
     }
   }

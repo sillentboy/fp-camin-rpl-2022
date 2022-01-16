@@ -4,7 +4,8 @@
   min-height: 52rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 20.25rem;
 
   &__container {
     display: flex;
@@ -92,6 +93,7 @@
         content: "";
         border-radius: 50%;
         background: rgba(251, 251, 251, 0.37);
+        -webkit-filter: blur(170px);
         filter: blur(170px);
         height: 35vw;
         width: 35vw;
@@ -124,7 +126,7 @@
     }
   }
   @include variables.breakpoints("sm") {
-    justify-content: unset;
+    margin-top: unset;
     align-items: center;
   }
 }
