@@ -4,30 +4,12 @@
   background-size: auto;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  overflow-x: hidden;
 
   &__container {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-
-    &-groupA {
-      display: flex;
-      flex-direction: row;
-      gap: 1.25rem;
-      flex-wrap: wrap;
-    }
-
-    &-groupB {
-      display: flex;
-      flex-direction: row;
-      gap: 1.25rem;
-      flex-wrap: wrap;
-
-      img {
-        width: 17rem;
-      }
-    }
   }
 }

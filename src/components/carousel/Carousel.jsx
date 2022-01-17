@@ -15,26 +15,21 @@ const Carousel = () => {
         <p>MENU</p>
       </div>
       <Swiper
-        spaceBetween={0}
-        slidesPerView={5}
         centeredSlides={true}
         loop={true}
+        loopedSlides={100}
         navigation={true}
         breakpoints={{
-          "@0.50": {
-            "slidesPerView": 1,
-            "spaceBetween": 0
-          },
-          "@0.75": {
+          "576": {
             "slidesPerView": 3,
             "spaceBetween": 0
           },
-          "@1.00": {
-            "slidesPerView": 4,
+          "992": {
+            "slidesPerView": 5,
             "spaceBetween": 0
           },
-          "@1.50": {
-            "slidesPerView": 6,
+          "1200": {
+            "slidesPerView": 7,
             "spaceBetween": 0
           }
         }}

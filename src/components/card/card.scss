@@ -1,16 +1,17 @@
 @use "../../variables";
 
 .catalog__card {
-  display: flex;
-  flex-direction: row;
   background: #ffffff;
   box-shadow: 7px 10px 24px rgba(255, 199, 31, 0.22);
   border-radius: 12px;
   padding: 18px;
-  flex: 1.5;
+  display: flex;
+  flex: 1.5 1 auto;
   justify-content: space-between;
-  height: 12rem;
   cursor: pointer;
+  margin: 0.5rem;
+  height: 13.5rem;
+  min-width: 13.5rem;
 
   &:hover {
     background: variables.$secondary-color;
@@ -34,13 +35,19 @@
   &-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 50%;
 
     h3 {
       font-weight: 800;
       font-size: 24px;
       line-height: 29px;
       color: #000000;
+      margin-bottom: 0.5rem;
+
+      @include variables.breakpoints("xs") {
+        font-size: 20px;
+      }
     }
 
     p {
@@ -48,6 +55,11 @@
       font-size: 14px;
       line-height: 20px;
       color: #868686;
+      margin-bottom: 0.5rem;
+
+      @include variables.breakpoints("xs") {
+        font-size: 12px;
+      }
     }
 
     span {
@@ -55,6 +67,10 @@
       font-size: 16px;
       line-height: 19px;
       color: #ffffff;
+
+      @include variables.breakpoints("xs") {
+        font-size: 14px;
+      }
     }
 
     button {
@@ -68,6 +84,30 @@
   }
 
   &-image {
-    align-self: center;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      min-width: 100px;
+      height: auto;
+      max-width: 270px;
+    }
+  }
+
+  @include variables.breakpoints("xxs") {
+    flex-direction: column;
+    height: unset;
+
+    &-text {
+      width: 100%;
+    }
+
+    &-image {
+      justify-content: center;
+      width: 100%;
+    }
   }
 }

@@ -1,22 +1,19 @@
 @use "../../variables";
 
 .hero {
-  min-height: 52rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 20.25rem;
+  height: 52rem;
 
   &__container {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    height: 80%;
 
     &-content {
       flex: 1;
       display: flex;
       justify-content: center;
       flex-direction: column;
+      margin-right: 1rem;
 
       h1 {
         font-weight: 800;
@@ -30,7 +27,6 @@
 
         @include variables.breakpoints("xs") {
           font-size: 36px;
-          text-align: unset;
         }
       }
 
@@ -46,7 +42,6 @@
 
         @include variables.breakpoints("xs") {
           font-size: 14px;
-          text-align: unset;
         }
       }
 
@@ -72,14 +67,11 @@
           width: 240px;
           height: 48px;
         }
-      }
 
-      @include variables.breakpoints("md") {
-        max-width: 375px;
-      }
-
-      @include variables.breakpoints("sm") {
-        align-items: center;
+        @include variables.breakpoints("xs") {
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
 
@@ -124,9 +116,5 @@
     @include variables.breakpoints("sm") {
       flex-direction: column;
     }
-  }
-  @include variables.breakpoints("sm") {
-    margin-top: unset;
-    align-items: center;
   }
 }

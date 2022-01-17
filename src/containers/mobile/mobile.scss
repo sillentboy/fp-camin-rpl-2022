@@ -5,19 +5,28 @@
   height: 20.5rem;
 
   &__container {
+    height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 5rem;
-    height: 100%;
 
-    img {
+    & > img {
       margin-top: -4rem;
       margin-bottom: -4rem;
-      z-index: 999;
+
+      @include variables.breakpoints("md") {
+        width: auto;
+        height: 24rem;
+        margin-top: -26px;
+      }
     }
 
     &-text {
-      padding-top: 3rem;
+      margin-left: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      z-index: 3;
 
       h2 {
         font-weight: bold;
@@ -25,21 +34,38 @@
         line-height: 3rem;
         text-transform: capitalize;
         color: #ffffff;
+        margin-bottom: 1rem;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
 
-        @include variables.breakpoints("lg") {
+        @include variables.breakpoints("md") {
           font-size: 2rem;
-          line-height: 2.8rem;
+          line-height: 2.5rem;
+        }
+
+        @include variables.breakpoints("sm") {
+          text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.6);
         }
       }
 
-      &__icon {
-        img {
-          height: 50px;
-          margin-right: 2rem;
+      img {
+        height: 40px;
+        margin-right: 0.6rem;
+        margin-top: 1rem;
+
+        @include variables.breakpoints("md") {
+          height: 35px;
         }
       }
     }
-    @include variables.breakpoints("md") {
+    @include variables.breakpoints("sm") {
+      flex-direction: row-reverse;
+      position: relative;
+
+      & > img {
+        margin-right: -2rem;
+        position: absolute;
+      }
     }
   }
 }
