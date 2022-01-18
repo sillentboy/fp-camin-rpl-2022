@@ -29,6 +29,10 @@
           font-size: 18px;
           line-height: 24px;
         }
+
+        @include variables.breakpoints("sm") {
+          font-size: 16px;
+        }
       }
 
       li {
@@ -51,6 +55,10 @@
 
         @include variables.breakpoints("sm") {
           font-size: 12px;
+        }
+
+        @include variables.breakpoints("sm") {
+          font-size: 10px;
         }
       }
     }

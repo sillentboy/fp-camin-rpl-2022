@@ -2,7 +2,9 @@ import './navbar.scss'
 import React from 'react'
 import logo from "../../assets/logo.svg";
 import { FiUser } from "react-icons/fi"
-import { RiShoppingBasket2Line } from 'react-icons/ri'
+import { RiShoppingBasket2Line, RiUserStarLine } from 'react-icons/ri'
+import { MdRestaurantMenu } from 'react-icons/md';
+import { BsAppIndicator } from 'react-icons/bs'
 
 const Navbar = () => {
   return (

@@ -28,6 +28,14 @@
       flex-direction: column;
       z-index: 3;
 
+      &__icon {
+        @include variables.breakpoints("sm") {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
       h2 {
         font-weight: bold;
         font-size: 2.4rem;
@@ -55,6 +63,10 @@
 
         @include variables.breakpoints("md") {
           height: 35px;
+        }
+
+        @include variables.breakpoints("sm") {
+          height: 32px;
         }
       }
     }

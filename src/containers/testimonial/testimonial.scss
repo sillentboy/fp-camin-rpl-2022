@@ -1,35 +1,67 @@
+@use "../../variables";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 .testimonial {
   &__container {
     margin: 7.5rem 0;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 
-    &-heading {
-      font-family: "Manrope";
-      color: #18191f;
-      position: relative;
-      flex: 1.5 1 auto;
-      max-width: 30rem;
-      margin: 0.5rem;
+    &-groupA {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 50%;
 
-      h2 {
-        font-weight: 800;
-        font-size: 48px;
-        line-height: 64px;
+      &__card {
+        margin: 0.5rem;
+
+        &:first-child {
+          text-align: end;
+          font-family: "Manrope";
+          color: #18191f;
+          position: relative;
+          max-width: 30rem;
+
+          h2 {
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 64px;
+
+            @include variables.breakpoints("lg") {
+              font-size: 42px;
+            }
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 32px;
+          }
+
+          svg {
+            z-index: -1;
+            position: absolute;
+            inset: -3.5rem auto 0 -1rem;
+          }
+        }
+
+        &:last-child {
+          width: 80%;
+        }
       }
+    }
 
-      p {
-        font-size: 18px;
-        line-height: 32px;
-      }
+    &-groupB {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-top: 3.25rem;
 
-      & > svg {
-        position: absolute;
-        top: 0.5rem;
-        left: 3rem;
+      &__card {
+        margin: 0.5rem;
+
+        &:last-child {
+          width: 80%;
+        }
       }
     }
   }

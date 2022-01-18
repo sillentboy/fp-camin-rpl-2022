@@ -1,4 +1,4 @@
-import { Navbar } from "./components";
+import { Navbar, MobileNav } from "./components";
 import {
   Catalog,
   Contact,
@@ -20,6 +20,7 @@ function App() {
       <Testimonial />
       <Contact />
       <Footer />
+      <MobileNav />
     </div>
   );
 }
