@@ -1,3 +1,4 @@
+@use "../../variables";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 .testimonial__container-card__box {
@@ -16,6 +17,16 @@
     line-height: 32px;
     color: #18191f;
     margin-bottom: 1.5rem;
+
+    @include variables.breakpoints("sm") {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 1rem;
+    }
+
+    @include variables.breakpoints("xs") {
+      font-size: 14px;
+    }
   }
 
   h6 {
@@ -23,6 +34,10 @@
     font-size: 18px;
     line-height: 28px;
     color: #18191f;
+
+    @include variables.breakpoints("sm") {
+      font-size: 16px;
+    }
   }
 
   span {
@@ -31,5 +46,9 @@
     font-size: 14px;
     line-height: 24px;
     color: #969bab;
+
+    @include variables.breakpoints("sm") {
+      font-size: 12px;
+    }
   }
 }

@@ -26,6 +26,10 @@
           @include variables.breakpoints("lg") {
             height: 40px;
           }
+
+          @include variables.breakpoints("sm") {
+            height: 32px;
+          }
         }
 
         &-B {
@@ -35,6 +39,10 @@
 
           @include variables.breakpoints("lg") {
             height: 30px;
+          }
+
+          @include variables.breakpoints("sm") {
+            height: 22px;
           }
         }
       }
@@ -48,6 +56,10 @@
         @include variables.breakpoints("lg") {
           font-size: 20px;
         }
+
+        @include variables.breakpoints("sm") {
+          font-size: 16px;
+        }
       }
 
       img {
@@ -55,6 +67,19 @@
           height: 30px;
         }
       }
+    }
+
+    @include variables.breakpoints("md") {
+      &-wrapper:first-child {
+        display: none;
+      }
+    }
+
+    @include variables.breakpoints("sm") {
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: space-between;
+      justify-content: flex-end;
     }
   }
 }

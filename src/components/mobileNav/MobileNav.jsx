@@ -7,9 +7,9 @@ import { BsAppIndicator } from 'react-icons/bs'
 const MobileNav = () => {
   return (
     <div className="mobileNav">
-      <MdRestaurantMenu />
-      <BsAppIndicator />
-      <RiUserStarLine />
+      <a href="#catalog"><MdRestaurantMenu size={30} color='#fff' /></a>
+      <a href="#mobile"><BsAppIndicator size={30} color='#fff' /></a>
+      <a href="#testimonial"><RiUserStarLine size={30} color='#fff' /></a>
     </div>
   )
 }

@@ -30,11 +30,24 @@
             @include variables.breakpoints("lg") {
               font-size: 42px;
             }
+
+            @include variables.breakpoints("sm") {
+              font-size: 32px;
+              line-height: 40px;
+            }
           }
 
           p {
             font-size: 18px;
             line-height: 32px;
+
+            @include variables.breakpoints("sm") {
+              font-size: 16px;
+            }
+
+            @include variables.breakpoints("xs") {
+              font-size: 14px;
+            }
           }
 
           svg {
@@ -61,6 +74,43 @@
 
         &:last-child {
           width: 80%;
+        }
+      }
+    }
+
+    @include variables.breakpoints("md") {
+      flex-direction: column;
+
+      &-groupA {
+        width: 100%;
+        align-items: flex-start;
+
+        &__card {
+          margin: 0;
+          padding: 0.5rem;
+
+          &:first-child {
+            text-align: unset;
+            max-width: unset;
+          }
+
+          &:last-child {
+            width: 100%;
+          }
+        }
+      }
+
+      &-groupB {
+        width: 100%;
+        margin: 0;
+
+        &__card {
+          margin: 0;
+          padding: 0.5rem;
+
+          &:last-child {
+            width: 100%;
+          }
         }
       }
     }
