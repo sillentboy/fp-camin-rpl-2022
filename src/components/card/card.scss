@@ -1,113 +1,114 @@
 @use "../../variables";
 
 .catalog__card {
-  background: #ffffff;
-  box-shadow: 7px 10px 24px rgba(255, 199, 31, 0.22);
-  border-radius: 12px;
-  padding: 18px;
-  display: flex;
-  flex: 1.5 1 auto;
-  justify-content: space-between;
-  cursor: pointer;
-  margin: 0.5rem;
-  height: 13.5rem;
-  min-width: 13.5rem;
-
-  &:hover {
-    background: variables.$secondary-color;
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 0px 1px black;
-
-    h3,
-    p {
-      color: #ffffff;
-    }
-
-    span {
-      color: #000000;
-    }
-
-    button {
-      background: variables.$tertiary-color;
-    }
-  }
-
-  &-text {
+    background: #ffffff;
+    box-shadow: 7px 10px 24px rgba(255, 199, 31, 0.22);
+    border-radius: 12px;
+    padding: 18px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
+    flex: 1.5 1 auto;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 0.5rem;
+    height: 13.5rem;
+    min-width: 13.5rem;
 
-    h3 {
-      font-weight: 800;
-      font-size: 24px;
-      line-height: 29px;
-      color: #000000;
-      margin-bottom: 0.5rem;
+    &:hover {
+        background: variables.$secondary-color;
+        box-sizing: border-box;
+        box-shadow: inset 0px 0px 0px 1px black;
 
-      @include variables.breakpoints("xs") {
-        font-size: 20px;
-      }
+        h3,
+        p {
+            color: #ffffff;
+        }
+
+        span {
+            color: #000000;
+        }
+
+        button {
+            background: variables.$tertiary-color;
+        }
     }
-
-    p {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 20px;
-      color: #868686;
-      margin-bottom: 0.5rem;
-
-      @include variables.breakpoints("xs") {
-        font-size: 12px;
-      }
-    }
-
-    span {
-      font-weight: bold;
-      font-size: 16px;
-      line-height: 19px;
-      color: #ffffff;
-
-      @include variables.breakpoints("xs") {
-        font-size: 14px;
-      }
-    }
-
-    button {
-      background: variables.$secondary-color;
-      border-radius: 18px;
-      outline: none;
-      border: none;
-      padding: 7px;
-      width: 8rem;
-    }
-  }
-
-  &-image {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-
-    img {
-      min-width: 100px;
-      height: auto;
-      max-width: 270px;
-    }
-  }
-
-  @include variables.breakpoints("xxs") {
-    flex-direction: column;
-    height: unset;
 
     &-text {
-      width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        h3 {
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+
+            @include variables.breakpoints("xs") {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #868686;
+            margin-bottom: 0.5rem;
+
+            @include variables.breakpoints("xs") {
+                font-size: 12px;
+            }
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #ffffff;
+
+            @include variables.breakpoints("xs") {
+                font-size: 14px;
+            }
+        }
+
+        button {
+            background: variables.$secondary-color;
+            border-radius: 18px;
+            outline: none;
+            border: none;
+            padding: 7px;
+            width: 8rem;
+        }
     }
 
     &-image {
-      justify-content: center;
-      width: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            min-width: 100px;
+            height: auto;
+            max-width: 270px;
+        }
     }
-  }
+
+    @include variables.breakpoints("xxs") {
+        flex-direction: column;
+        height: unset;
+
+        &-text {
+            width: 100%;
+        }
+
+        &-image {
+            justify-content: center;
+            width: 100%;
+        }
+    }
 }
